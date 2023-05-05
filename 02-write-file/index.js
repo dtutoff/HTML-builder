@@ -15,7 +15,7 @@ rl.question('Enter text (\'exit\' for close):\n', str => {
   str === 'exit' ? rl.close() : ws.write(`${str}`);
 });
 
-rl.on('line', (str) => {
+rl.on('line', str => {
   str === 'exit' ? rl.close() : ws.write(`\n${str}`);
 });
 
